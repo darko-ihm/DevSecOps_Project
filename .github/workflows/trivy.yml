@@ -1,0 +1,21 @@
+name: Trivy Security Scan
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  scan:
+    name: Build and Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          format: 'table'
+          exit-code: '0'
+          vuln-type: 'os,library'
