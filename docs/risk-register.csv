@@ -1,5 +1,5 @@
-Risk ID,Threat,Likelihood,Impact,Severity,Owner,Status,Notes
-R1,SQLi,High,High,Critical,Team,Open,
-R2,XSS,Med,Med,High,Team,Open,
-R3,Weak auth,High,High,Critical,Team,Open,
-R4,Deps vulns,Med,Med,High,Team,Open,
+ID,Загроза,Вразливість,Ймовірність,Вплив,Пріоритет,Статус,План пом'якшення
+R1,Викрадення/зміна даних БД,SQL Injection,Висока,Критичний,High,Відкрито,Використати параметризовані запити (ORM)
+R2,Крадіжка сесії користувача,Reflected XSS,Середня,Високий,Medium,Відкрито,Додати санітизацію та екранування вводу
+R3,Компрометація акаунтів,Слабка аутентифікація/хеші,Висока,Високий,High,Відкрито,Впровадити Argon2 та обмеження спроб входу
+R4,Витік інформації,Відкриті секрети в коді,Низька,Критичний,High,Відкрито,Перенести секрети в ENV змінні
